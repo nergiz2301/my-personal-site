@@ -3,30 +3,339 @@
 body{
     font-family:'Source Sans Pro';
     color:#2b2b2b;
+    margin:0;
+    padding:0;
 }
 
 /**********GRID************/
 .full-width{
-     width:1200px;
-     margin:0 auto;
-     overflow:auto;
+    width:100%;
+    margin:0 auto;
+     
+     
 
 }
 
 .half-width{
-    width:600px;
-    float:left;
+    width:50%;
+    
 
 }
 
 .third-width{
-    width:400px;
-    float:left;
+    width:100%;
+    
+}
+.half-width1{
+    width:100%;
 }
 
 /******************HEADER*****************/
 
 header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+    background:url('..//img/full-background.png');
+    background-size:cover;
+    background-position:center;
+    
+}
+
+header h1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    font-family:'Lora',serif;
+    font-size:1.2rem;
+    color:#bbc085;
+    padding-top:25px;
+}
+
+nav {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+nav ul li{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li a{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    text-transform:uppercase;
+    text-decoration:none;
+    font-size: 1rem;
+    color:#828282;
+    padding-top:20px;
+}
+
+header h2{
+    width: 90%;
+    font-family: 'Lora',serif;
+    font-size: 1.45rem;
+    line-height: 80px;
+    color:#9b9b9b;
+    padding:10px 25px;
+}
+
+header h2 span{
+    color: #2b2b2b;
+}
+
+/*************CSS CODE ABOUT****************/
+#about .full-width{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 80px 0;
+
+}
+
+#about h2{
+    font-family:'Lora',serif;
+    font-size:1.5rem;
+    padding-left: 20px;
+}
+
+#about p{
+    font-size:1rem;
+    color:#7f7f7f;
+    line-height:30px;
+    padding:0 20px;
+    
+ 
+
+}
+
+/******************WORK******************/
+
+#work {
+    text-align:center;
+    background-color:#ffbb99;
+
+}
+
+#work .full-width{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-flow: row wrap;
+    
+}
+
+#work img{
+    padding-bottom:10px;
+}
+
+#work h3{
+    font-family:'Source Sans Pro',serif;
+    font-size:1.5rem;
+    line-height:25px;
+    width:190px;
+    margin: 0 auto;
+   
+}
+
+#work p{
+    font-family:'Lora',serif;
+    font-size:1rem;
+    line-height:20px;
+    padding:0 30px;
+    
+}
+
+/*****************CONTACT********************/
+#contact{
+    background-color:#ebebeb;
+}
+
+#contact .full-width{
+    position:absolute;
+    padding:30px 0;
+
+}
+
+
+#contact.half-width1 figure,
+#contact figure #contact-image{
+    width:100%;
+    border:1px solid #ffffff;
+   
+
+}
+
+#contact h2,#contact #email-header, #contact #socialmedia-header, #contact ul{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow:row wrap;
+    width:90%;
+    
+}
+
+#contact #envelope{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:5px;
+
+}
+
+#contact h2{
+    text-align: center;
+    font-family:'Lora',serif;
+    font-size:1.8rem;
+    line-height:25px;
+   
+    
+}
+
+#contact #email-header{
+    font-family:'Source Sans Pro';
+    color:#2b2b2b;
+    font-size: 1.5rem;
+    font-weight:400;
+    line-height:25px;
+    margin:0;
+    padding-left:15px;
+}
+
+#contact #socialmedia-header{
+    font-size:1.6rem;
+    font-weight:700px;
+    line-height:25px;
+    margin:40px 0 0 0;
+    padding-left:15px;
+}
+
+#contact a{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-flow: row wrap;
+    text-decoration:none;
+    color:#c49075;
+    font-weight:bold;
+    font-size:1.5rem;
+    
+}
+
+/******************SOCIAL MEDIA*******************/
+#contact ul{
+    list-style:none;
+}
+
+#contact ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow:row wrap;
+}
+
+#contact ul img{
+    padding-right:28px;
+}
+/********************media query***********************/
+
+/*******************tablet*********************/
+@media (min-width: 768px){
+    body{
+        background:#ffffff;
+    }
+    
+    header h2{
+        font-size:1.6rem;
+        text-align: center;
+    }
+    
+    .full-width{
+        width:100%;
+    }
+    .half-width1{
+        width:100%;
+    }
+    .half-width{
+        width:90%;
+    }
+    header h2{
+        font-size:1.6rem;
+    }
+    
+    #about h2{
+        font-family:'Lora',serif;
+        font-size:1.8rem;
+        padding-left: 20px;
+}
+
+    #about p{
+        font-size:1.3rem;
+        color:#7f7f7f;
+        line-height:30px;
+        padding:0 20px;
+    }
+    #contact img #contact-img{
+        display:flex;
+        justify-content: center;
+        
+        
+    }
+
+    
+}
+/*******************desktop********************/
+@media (min-width: 1200px){
+    body{
+        background:#ffffff;
+    }
+    /**************BASE STYLES*****************/
+
+body{
+    font-family:'Source Sans Pro';
+    color:#2b2b2b;
+}
+
+/**********GRID************/
+.full-width{
+     width:100%;
+     margin:0 auto;
+     overflow:auto;
+
+}
+.half-width1{
+    width:50%;
+}
+
+.half-width{
+    width:50%;
+    
+
+}
+
+.third-width{
+    width:33.3%;
+    
+}
+
+/******************HEADER*****************/
+
+header{
+    width:100%;
     height:800px;
     background:url('..//img/full-background.png');
     background-size:cover;
@@ -37,7 +346,7 @@ header{
 header h1{
     padding:65px 0 65px 25px;
     font-family:'Lora',serif;
-    font-size:30px;
+    font-size:1.87rem;
     color:#bbc085;
 }
 
@@ -53,7 +362,7 @@ nav ul li{
 nav ul li a{
     text-transform:uppercase;
     text-decoration:none;
-    font-size: 18px;
+    font-size: 1.12rem;
     color:#828282;
     padding-left:80px;
 }
@@ -62,7 +371,7 @@ header h2{
     width: 1000px;
     clear:both;
     font-family: 'Lora',serif;
-    font-size: 72px;
+    font-size: 4.5rem;
     line-height: 80px;
     color:#9b9b9b;
     padding:20px 0 20px 25px;
@@ -73,7 +382,7 @@ header h2 span{
 }
 
 /*************CSS CODE ABOUT****************/
-#about.full-width{
+#about .full-width{
     padding: 80px 0;
 
 }
@@ -101,7 +410,7 @@ header h2 span{
 
 }
 
-#work.full-width{
+#work .full-width{
     padding:115px 0;
     
 }
@@ -132,7 +441,7 @@ header h2 span{
     background-color:#ebebeb;
 }
 
-#contact.full-width{
+#contact .full-width{
     padding:110px 0;
 
 }
@@ -184,35 +493,4 @@ header h2 span{
     font-size:28px;
 }
 
-/******************SOCIAL MEDIA*******************/
-#contact ul{
-    list-style:none;
-}
-
-#contact ul li{
-    display: inline-block;
-}
-
-#contact ul img{
-    padding-right:48px;
-}
-/********************media query***********************/
-/********************phone**********************/
-@media (max-width: 767px){
-    body{
-        background: #ffffff;
-    }
-
-}
-/*******************tablet*********************/
-@media (min-width: 768px){
-    body{
-        background:#ffffff;
-    }
-}
-/*******************desktop********************/
-@media (min-width: 1200px){
-    body{
-        background:#ffffff;
-    }
 }
